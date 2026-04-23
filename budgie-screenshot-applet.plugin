@@ -1,0 +1,8 @@
+[Plugin]
+Module=budgie-screenshot-applet
+Name=Screenshot
+Description=Zrzut ekranu jednym kliknięciem (Wayland/labwc)
+Authors=you
+Copyright=2026
+Website=https://github.com/
+Builtin=false
