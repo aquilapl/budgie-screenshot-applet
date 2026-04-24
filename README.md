@@ -25,7 +25,8 @@ org.buddiesofbudgie.BudgieScreenshot  (z budgie 10.10)
 ### Solus
 ```bash
 sudo eopkg it vala meson ninja \
-    budgie-desktop-devel libpeas-2-devel libgtk-3-devel
+    budgie-desktop-devel libpeas-2-devel libgtk-3-devel \
+    libgtk-layer-shell-devel
 ```
 
 ### Debian/Ubuntu:
