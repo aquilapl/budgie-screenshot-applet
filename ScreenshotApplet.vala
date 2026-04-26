@@ -55,10 +55,6 @@ public class ScreenshotApplet : Budgie.Applet {
         item_full.activate.connect(() => run_screenshot(null));
         menu.append(item_full);
 
-        var item_window = new Gtk.MenuItem.with_label("Okno");
-        item_window.activate.connect(() => run_screenshot("-w"));
-        menu.append(item_window);
-
         var item_area = new Gtk.MenuItem.with_label("Zaznacz obszar");
         item_area.activate.connect(() => run_screenshot("-a"));
         menu.append(item_area);
@@ -72,7 +68,6 @@ public class ScreenshotApplet : Budgie.Applet {
     }
 }
 
-// Zmieniona nazwa klasy na unikalną, aby uniknąć konfliktów z innymi wtyczkami
 public class SimpleScreenshotPlugin : GLib.Object, Budgie.Plugin {
 
     public Budgie.Applet get_panel_widget(string uuid) {
@@ -83,6 +78,5 @@ public class SimpleScreenshotPlugin : GLib.Object, Budgie.Plugin {
 [ModuleInit]
 public void peas_register_types(TypeModule module) {
     var objmodule = module as Peas.ObjectModule;
-    // Rejestracja nowej nazwy klasy
     objmodule.register_extension_type(typeof(Budgie.Plugin), typeof(SimpleScreenshotPlugin));
 }
