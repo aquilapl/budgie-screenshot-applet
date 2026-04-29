@@ -10,7 +10,9 @@ shared_library(
   'budgie-screenshot-applet',
   'ScreenshotApplet.vala',
   dependencies: [gtk, budgie, peas],
-  vala_args: ['--vapidir', meson.current_source_dir()],
+  vala_args: [
+    '--pkg', 'libpeas-2'
+  ],
   install: true,
   install_dir: plugin_dir
 )
